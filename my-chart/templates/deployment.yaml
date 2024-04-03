@@ -1,9 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
+  {{ "The Author of this deployment is - " | nindent 12}}, {{- "Yash Chouhan" }},
+  {{ .Values.custom.surname }}
+  {{ .Values.custom.name }} {{ .Values.custom.age.month }}
 metadata:
   name: {{ include "my-chart.fullname" . }}
   labels:
     {{- include "my-chart.labels" . | nindent 4 }}
+    app: {{ .Values.custom.name }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}

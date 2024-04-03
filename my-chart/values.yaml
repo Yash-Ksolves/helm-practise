@@ -105,3 +105,11 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+custom:
+  name: yash
+  surname: chouhan
+  age:
+    birth: 2002
+    month: oct
+    date: 26
