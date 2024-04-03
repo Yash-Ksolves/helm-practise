@@ -1,24 +1,5 @@
 apiVersion: apps/v1
 kind: Deployment
-
-
-
-  {{ .Values.custom.surname1 | default "none"}}
-  {{ .Values.custom.age.month | upper | quote}}
-
-
-
-  {{- with .Values.worker.name }}
-  {{- toYaml . | nindent 4}}
-  {{- end }}
-
-
-  {{- $myvar := false}}
-  {{- if $myvar }}
-  {{- "This condition is true" | nindent 4}}
-  {{- else }}
-  {{- "This condition is false" | nindent 4}}
-  {{- end}}
 metadata:
   name: {{ include "my-chart.fullname" . }}
   labels:
