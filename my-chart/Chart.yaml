@@ -24,7 +24,7 @@ version: 0.1.0
 appVersion: "1.16.0"
 
 dependencies: 
-   name: mysql
-   version: 10.1.1
-   repository: oci://registry-1.docker.io/bitnamicharts/mysql
+  - name: mysql
+    version: 10.1.1
+    repository: oci://registry-1.docker.io/bitnamicharts/mysql
 
