@@ -113,3 +113,11 @@ custom:
     birth: 2002
     month: oct
     date: 26
+
+worker:
+  name:
+    - "yash"
+    - "aman"
+    - "kushal"
+    - "sonu"
+    - "mohit"
