@@ -45,7 +45,7 @@ mysqldb:
   serviceName: mysqldb
   replicaCount: 1
   selector:
-    selector:
+    label:
       appName: mysqldb
   template:
     label: 
