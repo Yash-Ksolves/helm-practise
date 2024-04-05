@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysqldb-{{- include "my-chart.fullname" . -}}
+  name: {{ include "my-chart.fullname" . | printf "mysqldb-%s" }}
 spec:
   selector:
     app: {{ .Values.mysqldb.service.selector.appName }}

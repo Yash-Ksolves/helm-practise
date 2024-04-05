@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: mysqldb-{{- include "my-chart.fullname" . -}}
+  name: {{ include "my-chart.fullname" . | printf "mysqldb-%s" }}
 spec:
   serviceName: {{ .Values.mysqldb.serviceName  }}
   replicas: {{ .Values.mysqldb.replicaCount  }}

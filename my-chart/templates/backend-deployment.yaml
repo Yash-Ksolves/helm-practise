@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-{{- include "my-chart.fullname" . -}}
+  name: {{ include "my-chart.fullname" . | printf "backend-%s" }}
 spec:
   replicas: {{ .Values.backend.replicaCount }}
   selector:

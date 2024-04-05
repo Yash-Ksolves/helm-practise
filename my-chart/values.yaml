@@ -17,7 +17,7 @@ frontend:
       appName: frontend
     protocol: TCP
     port: 80
-    tragetPort: 80
+    targetPort: 80
 
 backend:
   replicaCount: 1
@@ -39,7 +39,7 @@ backend:
       appName: backend
     protocol: TCP
     port: 8080
-    tragetPort: 8080
+    targetPort: 8080
 
 mysqldb:
   serviceName: mysqldb
