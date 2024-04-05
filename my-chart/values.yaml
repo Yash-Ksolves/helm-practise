@@ -61,7 +61,7 @@ mysqldb:
     mountPath: /var/lib/mysql
   volumes:
     name: mysql-data
-    path: /home/opt/db
+    path: /opt/db
   rootPassword: yash
   dbName: test
     
