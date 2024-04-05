@@ -8,7 +8,7 @@ frontend:
       appName: frontend
   containerName: frontend
   image:
-    repository: yashchouhan/frontend:12
+    repository: yashchouhan/frontend
     tag: 12
   containerPort: 80
 
