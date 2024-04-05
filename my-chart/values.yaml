@@ -69,5 +69,4 @@ mysqldb:
     selector:
       appName: frontend
     protocol: TCP
-    port: 80
-    tragetPort: 80
+    port: 3306
