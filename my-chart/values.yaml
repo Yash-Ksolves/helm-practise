@@ -9,10 +9,11 @@ frontend:
   containerName: frontend
   image:
     repository: yashchouhan/frontend
-    tag: 12
+    tag: 13
   containerPort: 80
 
   service:
+    name: frontend
     selector:
       appName: frontend
     protocol: TCP
@@ -29,12 +30,13 @@ backend:
       appName: backend
   containerName: backend
   image:
-    repository: yashchouhan/backend-nv1
-    tag: 57
+    repository: yashchouhan/backend
+    tag: 13
   containerPort: 8080
   configMapName: spring-config
 
   service:
+    name: backend
     selector:
       appName: backend
     protocol: TCP
@@ -66,7 +68,8 @@ mysqldb:
   dbName: test
     
   service:
+    name: mysqldb
     selector:
-      appName: frontend
+      appName: mysqldb
     protocol: TCP
     port: 3306
