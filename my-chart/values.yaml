@@ -9,7 +9,7 @@ frontend:
   containerName: frontend
   image:
     repository: yashchouhan/frontend
-    tag: 13
+    tag: 14
   containerPort: 80
 
   service:
@@ -19,6 +19,7 @@ frontend:
     protocol: TCP
     port: 80
     targetPort: 80
+    nodePort: 32000
 
 backend:
   replicaCount: 1
@@ -31,7 +32,7 @@ backend:
   containerName: backend
   image:
     repository: yashchouhan/backend
-    tag: 13
+    tag: 14
   containerPort: 8080
   configMapName: spring-config
 
@@ -42,6 +43,7 @@ backend:
     protocol: TCP
     port: 8080
     targetPort: 8080
+    nodePort: 31000
 
 mysqldb:
   serviceName: mysqldb
