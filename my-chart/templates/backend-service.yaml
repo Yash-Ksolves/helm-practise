@@ -9,3 +9,4 @@ spec:
     - protocol: {{ .Values.backend.service.protocol }}
       port: {{ .Values.backend.service.port }}
       targetPort: {{ .Values.backend.service.targetPort }}
+  type: NodePort
