@@ -10,4 +10,4 @@ spec:
       port: {{ .Values.frontend.service.port }}
       targetPort: {{ .Values.frontend.service.targetPort }}
       nodePort: {{ .Values.frontend.service.nodePort }}
-  type: NodePort
+  type: LoadBalancer
